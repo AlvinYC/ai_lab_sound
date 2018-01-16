@@ -58,8 +58,8 @@ it means, stetch is linear-interpolation operation
 * spectrum(frequency) will be changed <br>
 in original b0038.wav, S2-S2 distance is 661 samples, almost 1.29 frame <br>
 in stretch b0038.wav, S2-S2 distance is 826 samples, almost 1.61 frame <br>
-spectrum analysis is used fixed frame size FFT (such as 512 sample) <br>
-when frame size is fixed, we will get differen spectrum output <br>
+when spectrum analysis use fixed frame size to do FFT (such as 512 sample) <br>
+we will get different spectrum output <br>
 
 ![stretch up 25%](https://drive.google.com/uc?id=1RE2CgLPfQvfAZxME69oAhnM_LQM-2NJl)
 
@@ -70,15 +70,15 @@ in the following figure, new b0038.wav contain two silence(0.4s and o.5s)<br>
 ![ silence](https://drive.google.com/uc?id=1xRB_shg9nFjWeWSk28BOC6FVvZ_LJ53z)
 
 ## Signal aspect -8 Volume
-it is easily to image the wave sound after change volume<br>
+it is easily to imagine the wave sound after changing volume<br>
 the following figure show that we make -10db amplifier for b0038.wav <br>
 [b0038.wav](https://drive.google.com/uc?id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y)<br>
 [b0038-10db](https://drive.google.com/uc?id=1a4wcdv9PIi7OwSR3BvN9_EMA9EkYwWFa)<br>
 ![b0038_minus10db](https://drive.google.com/uc?id=1eIYew6bI2YB39AWZA5ZNiuX0BaeS72u0)
 
 ## Knowledge aspect - 1 Mix human sound
-sometime, we mighe recod other human sound if we use stethoscope to measure or recoding hear sound. <br>
-in the following public  [dataset](http://www.voiptroubleshooter.com/open_speech/american.html)<br>
+sometime, we might get human sound if we use stethoscope to measure or record heart sound. <br>
+in this public dataset  [dataset](http://www.voiptroubleshooter.com/open_speech/american.html)<br>
 it contain 60 wav file, each file contain 10 sentence, totally 600 sentence)<br>
 * American English (25)
 * British English (15)
@@ -87,8 +87,8 @@ it contain 60 wav file, each file contain 10 sentence, totally 600 sentence)<br>
 * India (10) 
 
 in the following figure, we mix b0038.wav and OSR_us000_0010_8k.wav<br> (one of American English dataset from Harvard Sentences)<br>
-the content of choised American English is<br>
-```python
+the context of this utterance from American English is<br>
+```
 The birch canoe slid on the smooth planks.
 Glue the sheet to the dark blue background.
 ```
@@ -109,8 +109,7 @@ we assume stethoscope will be used in following environments
 we don't find public dataset for breath sound, but I think it is important issue on data collection)<br>
 in the following figure,
 * 1th row indicate [b0038 wav](https://drive.google.com/uc?id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y)<br>
-* 2th row indicate the breath sound, post process w/ -10 db amplify adjustment <br>(extracted from youtube: https://www.youtube.com/watch?v=z4Fu1udzrTw&index=4&list=PLLKSXV1ibO86qgE2y9cMqNFmh6LfOa8RM)<br>
-  [breath sound](https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH)
+* 2th row indicate the [breath sound](https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH), pre- process w/ -10 db amplify adjustment <br>(extracted from youtube: https://www.youtube.com/watch?v=z4Fu1udzrTw&index=4&list=PLLKSXV1ibO86qgE2y9cMqNFmh6LfOa8RM)<br>
 * 3th row indicate the wav which is mixed b0038.wav and breath sound <br>
   [b0038 with breath sound](https://drive.google.com/uc?id=1MinvNHq8pEfkszsX6T5HH7xRKXtl9fMF)
   
