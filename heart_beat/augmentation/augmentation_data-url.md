@@ -9,11 +9,11 @@ each category have correspoding detail augmenation methods, please check the fol
 # Summary
 * signal aspect
   - [x] 1.<font color=blue>[kaggle]</font> white noise
-  - [ ] 2.<font color=green>[paper]</font> Dither <font color=gray>white noise imply this behavior</font>
+  - [ ] 2.<font color=green>[paper]</font> Dither, <font color=gray>white noise imply this behavior</font>
   - [x] 3.<font color=blue>[kaggle]</font> Stretch (± second)
-  - [ ] 4.<font color=blue>[kaggle]</font> Frequency (± hz) <font color=gray>stretch imply spectrum changed</font>
-  - [ ] 5.<font color=green>[paper]</font> Pitch (± semitone) <font color=gray>period observation not clear in heart sound</font>
-  - [ ] 6.<font color=blue>[kaggle]</font> Shift <font color=gray> i think its useless for model training</font>
+  - [ ] 4.<font color=blue>[kaggle]</font> Frequency (± hz), <font color=gray>stretch imply spectrum changed</font>
+  - [ ] 5.<font color=green>[paper]</font> Pitch, (± semitone) <font color=gray>period observation not clear in heart sound</font>
+  - [ ] 6.<font color=blue>[kaggle]</font> Shift, <font color=gray> i think its useless for model training</font>
   - [x] 7.Silence
   - [x] 8.<font color=blue>[kaggle]</font> Volume
 * knowledge aspect (mix some ohter voice)
@@ -28,18 +28,15 @@ we use the following file as based line wave, which contain 8 second normal hear
 ```
 physionet/training/training-b/b0038.wav
 ```
-this wave will combine diffent augmenation methods into a new wave<br>
-
+this wave will combine different augmenation methods into a new wave<br>
 [b0038.wav file](https://drive.google.com/uc?export=view&id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y)
 
 ![orignal_jpg](https://drive.google.com/uc?id=1y3H6R-0xpZ1KcmaFYnpbvMdQRiHBA_-I)
 
 ## Signal aspect - 1.white noise
-
 white noise is a random signal having equal intensity at different frequencies <br>
 after merge b0038.wav and white noise, we can get this wave file <br>
 [b0038 with white noise](https://drive.google.com/uc?id=1GnEkJwZ0JYn9mCIV4GJEskVsDmvjermh)
-
 ![orignal_and_white_noise](https://drive.google.com/uc?id=1WH__3N7sdJgFz-BwMUuMvL3fgrdPNMq6)
 
 ## Signal aspect - 3 Stretch up/down
@@ -80,7 +77,6 @@ the following figure show that we make -10db amplifier for b0038.wav <br>
 ![b0038_minus10db](https://drive.google.com/uc?id=1eIYew6bI2YB39AWZA5ZNiuX0BaeS72u0)
 
 ## Knowledge aspect - 1 Mix human sound
-
 sometime, we mighe recod other human sound if we use stethoscope to measure or recoding hear sound. <br>
 in the following public  [dataset](http://www.voiptroubleshooter.com/open_speech/american.html)<br>
 it contain 60 wav file, each file contain 10 sentence, totally 600 sentence)<br>
@@ -88,7 +84,7 @@ it contain 60 wav file, each file contain 10 sentence, totally 600 sentence)<br>
 * British English (15)
 * Mandarin Chinese (4)
 * French (6)
-* India (10) <br>
+* India (10) 
 
 in the following figure, we mix b0038.wav and OSR_us000_0010_8k.wav<br> (one of American English dataset from Harvard Sentences)<br>
 the content of choised American English is<br>
@@ -117,6 +113,6 @@ in the following figure,
   [breath sound](https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH)
 * 3th row indicate the wav which is mixed b0038.wav and breath sound <br>
   [b0038 with breath sound](https://drive.google.com/uc?id=1MinvNHq8pEfkszsX6T5HH7xRKXtl9fMF)
-
+  
 
 ![b0038 mix breath](https://drive.google.com/uc?id=1TO-gtjEFUMDIoDigzSsFW3f3vsfdkFBk)
