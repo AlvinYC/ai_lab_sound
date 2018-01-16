@@ -32,7 +32,6 @@ this wave will combine diffent augmenation methods into a new wave<br>
 
 <audio src="https://drive.google.com/uc?export=view&id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y" controls preload></audio>
 
-
 ![orignal_jpg](https://drive.google.com/uc?id=1y3H6R-0xpZ1KcmaFYnpbvMdQRiHBA_-I)
 
 ## Signal aspect - 1.white noise
