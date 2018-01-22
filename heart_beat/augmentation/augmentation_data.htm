@@ -11,7 +11,17 @@
         </style>
 	</head>
 	<body>
-	    以下Physionet公開資料庫所提供的一個正常正常心跳聲音檔（長度為8秒鐘)，資料擴增(Data Augmentation)會以這個語音檔(b0038.wav)為基礎，<br>以論文/Kaggle所提及之方法實現，並以語音檔呈現
+        以下Physionet公開資料庫所提供的一個正常正常心跳聲音檔（長度為8秒鐘)，資料擴增(Data Augmentation)會以這個語音檔(b0038.wav)為基礎，<br>
+        以論文/Kaggle所提及之方法實現，並以語音檔呈現 <p>
+        <u>希望陳醫師能指教的有</u>
+        <ol>
+            <li> 該種方法是否合理，特別是以知識背景角度出發的項目
+                <ul>
+                    <li>平常收音收到的呼吸聲，跟聽診器收到的呼吸聲是否相同</li>
+                </ul>
+            </li>
+            <li> 是否還有醫生常聽到的異常情況不是這些範圍內的</li>
+        </ol>
 		<br>
         <img src="https://drive.google.com/uc?id=1e6b9-1K31cfru9Bej5Z1qalQxPlRPFEm" width="40%"></img><br>
         <audio src="https://drive.google.com/uc?export=view&id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y" controls preload></audio>
@@ -21,6 +31,7 @@
             <li>以信號處理角度做資料擴增: 能夠以軟體工程方式來擴增樣本資料，如：將訊號延長/縮短特定比例(stretch)</li>
             <li>以知識背景角度做資料擴增: 無法以軟體工程方式直接達到擴增樣本資料，只能以訊號疊加的方式來產生新樣本，如將心音疊加肺的呼吸聲</li>
         </ul>
+        
         <h2>擴增方法及合成音效</h2>
         以下列出資料擴增兩大類的具體方法，具灰體字之項目為目前評估不適合做心音資料擴增或者難以做到
         <ul>
