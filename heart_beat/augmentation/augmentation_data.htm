@@ -1,7 +1,65 @@
+<!DOCTYPE html>
 <html>
-
-    <body>
-        this wave will combine diffent augmenation methods into a new wave<br>
+	<head>
+		<meta charset="UTF-8">
+        <title>Heart whisper augmentation</title>
+        <style type="text/css">
+        	body {font-family: sans-serif;}
+            div {vertical-align:middle; width:500px;}
+            audio {width:220px;}
+            li {vertical-align:top}
+        </style>
+	</head>
+	<body>
+	    this wave will combine diffent augmenation methods into a new wave
+		<br>
+		
+        <img src="https://drive.google.com/uc?id=1e6b9-1K31cfru9Bej5Z1qalQxPlRPFEm" width="40%"></img><br>
         <audio src="https://drive.google.com/uc?export=view&id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y" controls preload></audio>
-    </body>
+        <h1>Summary</h1>
+        <ul>
+            <li><b>signal aspect</b></li>
+            <ol>
+                <li>[x] <font color=blue>[kaggle]</font> white noise <br>
+                        <audio src="https://drive.google.com/uc?id=1GnEkJwZ0JYn9mCIV4GJEskVsDmvjermh" controls preload> </audio>
+                </li>
+                <li> [x] <font color=blue>[kaggle]</font> Stretch up 25%(8s->10s)<br>
+                    <audio src="https://drive.google.com/uc?id=1dClsgfjytxpNdkB1fFKEXYTtUk7ynanX" controls preload></audio>
+                </li>
+                <li> [x] Silence (silence1=0.4s, silence2=0.5s)<br>
+                    <audio src="https://drive.google.com/uc?id=10FxbPrhnzJMVS2wnUjZVe56cLKzQD9wa" controls preload></audio>
+                </li>
+                <li> [x] <font color=blue>[kaggle]</font> Volume -10db <br>
+                    <audio src="https://drive.google.com/uc?id=1a4wcdv9PIi7OwSR3BvN9_EMA9EkYwWFa" controls preload></audio>
+                </li>
+                <li> [ ] <font color=green>[paper]</font> Dither  <font color=gray>white noise imply this behavior</font></li>
+                <li> [ ] <font color=blue>[kaggle]</font> Frequency (± hz) 	<font color=gray>stretch imply spectrum changed</font></li>
+                <li> [ ] <font color=green>[paper]</font> Pitch (± semitone)  <font color=gray>period observation not clear in heart sound</font></li>
+                <li> [ ] <font color=blue>[kaggle]</font> Shift <font color=gray> i think its useless for model training</font> </li>
+            </ol>
+            <li><b>knowledge aspect</b></li>
+            <ol>
+                <li> [x] <font color=green>[paper]</font> mix humand speech (<a href="http://www.voiptroubleshooter.com/open_speech/american.html">dataset</a>)<br>
+                    <table>
+                    <tr><td>human Sound</td><td><audio src="https://drive.google.com/uc?id=1bSy6dL8fNV2VIQ3uMoq2AGj50x3Mnjms" controls preload></audio></td></tr>
+                    <tr><td>Mix human </td><td><audio src="https://drive.google.com/uc?id=1cE0iFZLo3qNJVMZhalqaspLDw_HSu59P" controls preload></audio></td></tr>
+                    </table>
+                </li>
+                <li> [x] mix breath (lung) voice<br>
+                    <table>
+                        <tr><td>Breath Sound</td><td> <audio src="https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH" controls preload></audio><br></td></tr>
+                        <tr><td>Mix Breath</td><td> <audio src="https://drive.google.com/uc?id=1MinvNHq8pEfkszsX6T5HH7xRKXtl9fMF" controls preload></audio></td></tr>
+                </table>
+                </li>
+                <li> [ ] mix environment voice such as office 
+                    <ul>
+                        <li> [ ] office voice <font color=gray>(hard to get rich variance)</font></li>
+                        <li> [ ] home voice <font color=gray>(hard to get rich variance)</font></li>
+                    </ul>
+                </li>
+            
+            </ol>
+        </ul>
+
+	</body>
 </html>
