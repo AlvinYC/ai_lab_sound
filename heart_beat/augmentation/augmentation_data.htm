@@ -6,55 +6,62 @@
         <style type="text/css">
         	body {font-family: sans-serif;}
             div {vertical-align:middle; width:500px;}
-            audio {width:220px;}
+            audio {width:300px;}
             li {vertical-align:top}
         </style>
 	</head>
 	<body>
-	    this wave will combine diffent augmenation methods into a new wave
+	    以下Physionet公開資料庫所提供的一個正常正常心跳聲音檔（長度為8秒鐘)，資料擴增(Data Augmentation)會以這個語音檔(b0038.wav)為基礎，<br>以論文/Kaggle所提及之方法實現，並以語音檔呈現
 		<br>
-		
         <img src="https://drive.google.com/uc?id=1e6b9-1K31cfru9Bej5Z1qalQxPlRPFEm" width="40%"></img><br>
         <audio src="https://drive.google.com/uc?export=view&id=1HPypU4qu6cCFVgnX0oHnPGtpA54JaE4Y" controls preload></audio>
-        <h1>Summary</h1>
+        <h2>資料擴增簡述</h2>
+        首先我們將資料擴增的方法粗分為兩大類
         <ul>
-            <li><b>signal aspect</b></li>
+            <li>以信號處理角度做資料擴增: 能夠以軟體工程方式來擴增樣本資料，如：將訊號延長/縮短特定比例(stretch)</li>
+            <li>以知識背景角度做資料擴增: 無法以軟體工程方式直接達到擴增樣本資料，只能以訊號疊加的方式來產生新樣本，如將心音疊加肺的呼吸聲</li>
+        </ul>
+        <h2>擴增方法及合成音效</h2>
+        以下列出資料擴增兩大類的具體方法，具灰體字之項目為目前評估不適合做心音資料擴增或者難以做到
+        <ul>
+            <li><b>以信號處理角度做資料擴增</b></li>
             <ol>
-                <li>[x] <font color=blue>[kaggle]</font> white noise <br>
+                <li>[x] <font color=blue></font> 加白噪聲 (White Noise) <br>
                         <audio src="https://drive.google.com/uc?id=1GnEkJwZ0JYn9mCIV4GJEskVsDmvjermh" controls preload> </audio>
                 </li>
-                <li> [x] <font color=blue>[kaggle]</font> Stretch up 25%(8s->10s)<br>
+                <li> [x] <font color=blue>]</font> 音訊拉伸 (Stretch): 等比例延長或縮短訊號，下面的例子是延長 25%(8s->10s)<br>
                     <audio src="https://drive.google.com/uc?id=1dClsgfjytxpNdkB1fFKEXYTtUk7ynanX" controls preload></audio>
                 </li>
-                <li> [x] Silence (silence1=0.4s, silence2=0.5s)<br>
+                <li> [x] 片斷靜音 (Silence): 隨機將片斷音訊抑制為靜音，下面的例子是將訊號的兩個時間抑制為靜音 (silence1=0.4s, silence2=0.5s)<br>
                     <audio src="https://drive.google.com/uc?id=10FxbPrhnzJMVS2wnUjZVe56cLKzQD9wa" controls preload></audio>
                 </li>
-                <li> [x] <font color=blue>[kaggle]</font> Volume -10db <br>
+                <li> [x] 音量放大縮小<font color=blue></font> (Volume)，下面的例子是將訊號強度降低 10db <br>
                     <audio src="https://drive.google.com/uc?id=1a4wcdv9PIi7OwSR3BvN9_EMA9EkYwWFa" controls preload></audio>
                 </li>
-                <li> [ ] <font color=green>[paper]</font> Dither  <font color=gray>white noise imply this behavior</font></li>
-                <li> [ ] <font color=blue>[kaggle]</font> Frequency (± hz) 	<font color=gray>stretch imply spectrum changed</font></li>
-                <li> [ ] <font color=green>[paper]</font> Pitch (± semitone)  <font color=gray>period observation not clear in heart sound</font></li>
-                <li> [ ] <font color=blue>[kaggle]</font> Shift <font color=gray> i think its useless for model training</font> </li>
+                <li> [ ] <font color=green></font> 加入擾動 (Dither)  <font color=gray>將訊號的低位元強制歸零以達到擾動訊號的目的，加入白雜訊亦是擾動的方法之一</font></li>
+                <li> [ ] <font color=blue></font> 頻率改變 (Frequency) ±hz <font color=gray>單位時間上頻譜上的變動，音訊拉伸時已經隱含了這樣的變動</font></li>
+                <li> [ ] <font color=green></font> 音高改變 (Pitch) ±semitone  <font color=gray>音高(單位semitone)跟頻率是同樣的變動因素，兩者有互換公式，此單位一般用於音樂領域</font></li>
+                <li> [ ] <font color=blue></font> 訊號位移 (Shift) <font color=gray> 個人認為位移比較不具資料擴增的意義</font> </li>
             </ol>
-            <li><b>knowledge aspect</b></li>
+            <br>
+            <li><b>以知識背景角度做資料擴增</b></li>
             <ol>
-                <li> [x] <font color=green>[paper]</font> mix humand speech (<a href="http://www.voiptroubleshooter.com/open_speech/american.html">dataset</a>)<br>
+                <li> [x] <font color=green></font> 混合人聲 (<a href="http://www.voiptroubleshooter.com/open_speech/american.html">dataset</a>)<br>
                     <table>
-                    <tr><td>human Sound</td><td><audio src="https://drive.google.com/uc?id=1bSy6dL8fNV2VIQ3uMoq2AGj50x3Mnjms" controls preload></audio></td></tr>
-                    <tr><td>Mix human </td><td><audio src="https://drive.google.com/uc?id=1cE0iFZLo3qNJVMZhalqaspLDw_HSu59P" controls preload></audio></td></tr>
+                    <tr><td>人聲音檔</td><td><audio src="https://drive.google.com/uc?id=1bSy6dL8fNV2VIQ3uMoq2AGj50x3Mnjms" controls preload></audio></td></tr>
+                    <tr><td>混合音檔 </td><td><audio src="https://drive.google.com/uc?id=1cE0iFZLo3qNJVMZhalqaspLDw_HSu59P" controls preload></audio></td></tr>
                     </table>
                 </li>
-                <li> [x] mix breath (lung) voice<br>
+                <li> [x] 混合呼吸(肺)聲<br>
                     <table>
-                        <tr><td>Breath Sound</td><td> <audio src="https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH" controls preload></audio><br></td></tr>
-                        <tr><td>Mix Breath</td><td> <audio src="https://drive.google.com/uc?id=1MinvNHq8pEfkszsX6T5HH7xRKXtl9fMF" controls preload></audio></td></tr>
+                        <tr><td>呼吸聲音檔</td><td> <audio src="https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH" controls preload></audio><br></td></tr>
+                        <tr><td>混合音檔</td><td> <audio src="https://drive.google.com/uc?id=1MinvNHq8pEfkszsX6T5HH7xRKXtl9fMF" controls preload></audio></td></tr>
                 </table>
                 </li>
-                <li> [ ] mix environment voice such as office 
+                <li> [ ] 混合環境音 
                     <ul>
-                        <li> [ ] office voice <font color=gray>(hard to get rich variance)</font></li>
-                        <li> [ ] home voice <font color=gray>(hard to get rich variance)</font></li>
+                        <li> [ ] 辦公室環境音 <font color=gray>周圍有鍵盤聲，影印機，開門，etc ... (較難蒐集資料)</font></li>
+                        <li> [ ] 家庭環境音 <font color=gray>周圍有電視，小孩遊戲，etc ... (較難蒐集資料)</font></li>
                     </ul>
                 </li>
             
