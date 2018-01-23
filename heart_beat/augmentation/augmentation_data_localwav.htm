@@ -38,16 +38,16 @@
             <li><b>以信號處理角度做資料擴增</b></li>
             <ol>
                 <li>[x] <font color=blue></font> 加白噪聲 (White Noise): 白噪聲是指功率密度在整個頻域內均勻分佈的噪聲，在時域上訊號是不規律的<br>
-                        <audio src="https://drive.google.com/uc?id=1GnEkJwZ0JYn9mCIV4GJEskVsDmvjermh" controls preload> </audio>
+                        <audio src="./wavpng/01_original_white_8k.wav" controls preload> </audio>
                 </li>
                 <li> [x] <font color=blue>]</font> 音訊拉伸 (Stretch): 等比例延長或縮短訊號，下面的例子是延長 25%(8s->10s)<br>
-                    <audio src="https://drive.google.com/uc?id=1dClsgfjytxpNdkB1fFKEXYTtUk7ynanX" controls preload></audio>
+                    <audio src="./wavpng/03_b0038-dcbios-stretch_up25-8k.wav" controls preload></audio>
                 </li>
                 <li> [x] 片斷靜音 (Silence): 隨機將片斷音訊抑制為靜音，下面的例子是將訊號的兩個時間抑制為靜音 (silence1=0.4s, silence2=0.5s)<br>
-                    <audio src="https://drive.google.com/uc?id=10FxbPrhnzJMVS2wnUjZVe56cLKzQD9wa" controls preload></audio>
+                    <audio src="./wavpng/07_b0038-dcbios-silence-8k.wav" controls preload></audio>
                 </li>
                 <li> [x] 音量放大縮小<font color=blue></font> (Volume)，下面的例子是將訊號強度降低 10db <br>
-                    <audio src="https://drive.google.com/uc?id=1a4wcdv9PIi7OwSR3BvN9_EMA9EkYwWFa" controls preload></audio>
+                    <audio src="./wavpng//08_b0038-dcbios-minus10db-8k.wav" controls preload></audio>
                 </li>
                 <li> [ ] <font color=green></font> 加入擾動 (Dither)  <font color=gray>將訊號的低位元強制歸零以達到擾動訊號的目的，加入白雜訊亦是擾動的方法之一</font></li>
                 <li> [ ] <font color=blue></font> 頻率改變 (Frequency) ±hz <font color=gray>單位時間上頻譜上的變動，音訊拉伸時已經隱含了這樣的變動</font></li>
@@ -59,14 +59,14 @@
             <ol>
                 <li> [x] <font color=green></font> 混合人聲 (<a href="http://www.voiptroubleshooter.com/open_speech/american.html">dataset</a>)<br>
                     <table>
-                    <tr><td>人聲音檔</td><td><audio src="https://drive.google.com/uc?id=1bSy6dL8fNV2VIQ3uMoq2AGj50x3Mnjms" controls preload></audio></td></tr>
-                    <tr><td>混合音檔 </td><td><audio src="https://drive.google.com/uc?id=1cE0iFZLo3qNJVMZhalqaspLDw_HSu59P" controls preload></audio></td></tr>
+                    <tr><td>人聲音檔</td><td><audio src="./wavpng/11-OSR_us_000_0010_8k.wav" controls preload></audio></td></tr>
+                    <tr><td>混合音檔 </td><td><audio src="./wavpng/11-b0038-mix-human-8k.wav" controls preload></audio></td></tr>
                     </table>
                 </li>
                 <li> [x] 混合呼吸(肺)聲<br>
                     <table>
-                        <tr><td>呼吸聲音檔</td><td> <audio src="https://drive.google.com/uc?id=1Whz6jHDKvgB42c4WY4eOa0QW-Q8yx4zH" controls preload></audio><br></td></tr>
-                        <tr><td>混合音檔</td><td> <audio src="https://drive.google.com/uc?id=12Cr4Bnsxz6aPSoW3joWosr4cL88i1CDM" controls preload></audio></td></tr>
+                        <tr><td>呼吸聲音檔</td><td> <audio src="./wavpng/13-b0038-mix-breath-8k.wav" controls preload></audio><br></td></tr>
+                        <tr><td>混合音檔</td><td> <audio src="./wavpng/13-breath-minus10db-8k.wav" controls preload></audio></td></tr>
                 </table>
                 </li>
                 <li> [ ] 混合環境音 
