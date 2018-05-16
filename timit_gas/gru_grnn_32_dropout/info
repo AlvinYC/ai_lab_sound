@@ -1,0 +1,15 @@
+Dir                  gru_grnn_32_dropout
+Model                gru_autoencoder
+Structure            1 + 1 + 1 + 1
+Hidden_neuron_num    64
+RNN_type             gru
+RNN_cell_num         32
+Loss_function        norm2
+Learning_rate        0.0008
+Dropout_keep_prob    0.3
+Zoneout_keep_prob    1.0
+Noise_magnitude      0.0
+Tolerance_window     2
+Batch_size           60
+Max_epoch            60
+Train_utt_num        4562

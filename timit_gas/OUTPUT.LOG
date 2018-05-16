@@ -1,0 +1,223 @@
+alvin@ai-labs-alvin:~/cei/notebook_home/ai_lab_sound/timit_gas$ ./run.sh 
+/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/nnetbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/latbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/fgmmbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/sgmm2bin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/sgmmbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/featbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/gmmbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/fstbin/:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/src/bin:/home/alvin/cei/notebook_home/ai_lab_sound/timit_gas/kaldi/tools/openfst/bin:/home/alvin/conda/bin:/home/alvin/.pyenv/bin:/usr/local/cuda/bin:/home/alvin/conda/bin:/home/alvin/.pyenv/bin:/usr/local/cuda/bin:/home/alvin/bin:/home/alvin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin
+
+=============================================================
+                    Training Config Info.                    
+=============================================================
+Dir                            gru_grnn_32_dropout
+Model                          gru_autoencoder
+Model_loc                      models/my_model
+Hidden_neuron_num              64
+RNN_cell_num                   32
+RNN_type                       gru
+Learning_rate                  0.0008
+Dropout_keep_prob              0.3
+Zoneout_keep_prob              1.0
+Noise_magnitude                0.0
+Batch_size                     60
+Max_epoch                      60
+
+=============================================================
+                      Loading data                          
+=============================================================
+feature dim: 39
+utt_num: 4562
+dev_utt_num: 58
+=============================================================
+                      Set up models                          
+=============================================================
+2018-05-14 18:28:17.032217: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-05-14 18:28:17.032579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.91GiB freeMemory: 7.54GiB
+2018-05-14 18:28:17.032592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2018-05-14 18:28:17.395374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-05-14 18:28:17.395394: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2018-05-14 18:28:17.395399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2018-05-14 18:28:17.395583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7280 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+=============================================================
+                      Start Training                         
+=============================================================
+[ Epoch 1 ]
+
+Progress: 4562/4562 loss:0.8728
+[ Epoch 2 ]
+
+Progress: 4562/4562 loss:0.8009
+[ Epoch 3 ]
+
+Progress: 4562/4562 loss:0.7757
+[ Epoch 4 ]
+
+Progress: 4562/4562 loss:0.7550
+[ Epoch 5 ]
+
+Progress: 4562/4562 loss:0.7287
+[ Epoch 6 ]
+
+Progress: 4562/4562 loss:0.7692
+[ Epoch 7 ]
+
+Progress: 4562/4562 loss:0.7050
+[ Epoch 8 ]
+
+Progress: 4562/4562 loss:0.7153
+[ Epoch 9 ]
+
+Progress: 4562/4562 loss:0.6832
+[ Epoch 10 ]
+
+Progress: 4562/4562 loss:0.7163
+[ Epoch 11 ]
+
+Progress: 4562/4562 loss:0.7267
+[ Epoch 12 ]
+
+Progress: 4562/4562 loss:0.7218
+[ Epoch 13 ]
+
+Progress: 4562/4562 loss:0.6782
+[ Epoch 14 ]
+
+Progress: 4562/4562 loss:0.6814
+[ Epoch 15 ]
+
+Progress: 4562/4562 loss:0.6973
+[ Epoch 16 ]
+
+Progress: 4562/4562 loss:0.6812
+[ Epoch 17 ]
+
+Progress: 4562/4562 loss:0.7023
+[ Epoch 18 ]
+
+Progress: 4562/4562 loss:0.7071
+[ Epoch 19 ]
+
+Progress: 4562/4562 loss:0.6720
+[ Epoch 20 ]
+
+Progress: 4562/4562 loss:0.6693
+Progress: 58/58 loss:0.6753
+The dev loss is 0.6753
+[ Epoch 21 ]
+
+Progress: 4562/4562 loss:0.6841
+Progress: 58/58 loss:0.6744
+The dev loss is 0.6744
+[ Epoch 22 ]
+
+Progress: 4562/4562 loss:0.6763
+Progress: 58/58 loss:0.6732
+The dev loss is 0.6732
+[ Epoch 23 ]
+
+Progress: 4562/4562 loss:0.6490
+Progress: 58/58 loss:0.6714
+The dev loss is 0.6714
+[ Epoch 24 ]
+
+Progress: 4562/4562 loss:0.6551
+Progress: 58/58 loss:0.6713
+The dev loss is 0.6713
+[ Epoch 25 ]
+
+Progress: 4562/4562 loss:0.6555
+Progress: 58/58 loss:0.6691
+The dev loss is 0.6691
+[ Epoch 26 ]
+
+Progress: 4562/4562 loss:0.6478
+Progress: 58/58 loss:0.6692/home/alvin/conda/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+
+The dev loss is 0.6692
+Performance get worse, stop training
+=============================================================
+      Training finished, show config info. again             
+=============================================================
+=============================================================
+                    Training Config Info.                    
+=============================================================
+Dir                            gru_grnn_32_dropout
+Model                          gru_autoencoder
+Model_loc                      models/my_model
+Hidden_neuron_num              64
+RNN_cell_num                   32
+RNN_type                       gru
+Learning_rate                  0.0008
+Dropout_keep_prob              0.3
+Zoneout_keep_prob              1.0
+Noise_magnitude                0.0
+Batch_size                     60
+Max_epoch                      60
+
+
+/home/alvin/conda/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+=============================================================
+                    Training Config Info.                    
+=============================================================
+Dir                            gru_grnn_32_dropout
+Model                          gru_autoencoder
+Model_loc                      models/my_model
+Hidden_neuron_num              64
+RNN_cell_num                   32
+RNN_type                       gru
+Learning_rate                  0.0008
+Dropout_keep_prob              0.3
+Zoneout_keep_prob              1.0
+Noise_magnitude                0.0
+Batch_size                     60
+Max_epoch                      60
+
+=============================================================
+                  Decode config info.                        
+=============================================================
+Dir                            gru_grnn_32_dropout
+Batch_size                     25
+Model_loc                      models/my_model
+Tolerance_window               2
+=============================================================
+                      Loading data                          
+=============================================================
+2018-05-14 19:10:05.872497: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-05-14 19:10:05.872852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.91GiB freeMemory: 7.47GiB
+2018-05-14 19:10:05.872867: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2018-05-14 19:10:06.246941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-05-14 19:10:06.246966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2018-05-14 19:10:06.246974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2018-05-14 19:10:06.247112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7218 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+feature dim: 39
+utt_num: 1680
+=============================================================
+                      Set up models.                         
+=============================================================
+
+=============================================================
+                      Start Decoding                         
+=============================================================
+Progress: 1680/1680 Precision:0.8298, Recall:0.8936
+thresh precision recall f_score r_val
+0.0500 93.9193 21.1612 34.5401 44.2505
+0.0300 91.9170 44.2718 59.7601 60.5693
+0.0100 78.9923 78.6696 78.8306 81.9359
+0.0090 77.4464 80.6714 79.0260 81.8080
+0.0080 75.8324 82.6373 79.0888 80.9165
+0.0075 75.0480 83.6743 79.1267 80.1810
+0.0070 74.1650 84.7167 79.0904 79.1261
+0.0065 73.2339 85.7390 78.9946 77.7971
+0.0060 72.3068 86.7559 78.8751 76.2657
+0.0055 71.3620 87.8631 78.7575 74.4763
+0.0050 70.3112 88.8406 78.4972 72.4278
+0.0045 69.2961 89.8760 78.2556 70.2324
+0.0040 68.1732 90.8435 77.8924 67.7599
+0.0030 65.9477 92.8159 77.1083 62.3706
+0.0020 63.6564 94.4827 76.0650 56.5584
+0.0010 61.4673 95.9285 74.9253 50.6328
+
+The best r_val is: 81.9359

@@ -1,0 +1,4 @@
+Dir                  gru_grnn_32_dropout
+Batch_size           25
+Test_utt_num         1680
+Tolerance_window     2
